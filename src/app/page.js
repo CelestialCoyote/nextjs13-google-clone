@@ -8,7 +8,7 @@ export default function Home() {
 		<>
 			<HomeHeader />
 
-			<div className='flex flex-col items-center mt-24 border	b-2'>
+			<div className='flex flex-col items-center mt-24'>
 				<Image
 					src="/static/Google_logo_(2010-2013).png"
 					alt="Google Logo"
