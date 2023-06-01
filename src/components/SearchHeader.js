@@ -9,9 +9,9 @@ import { TbGridDots } from 'react-icons/tb';
 export default function SearchHeader() {
 
 	return (
-		<header className='sticky top-0 bg-white border-2 border-green-600'>
-			<div className='flex w-full p-3 items-center justify-between border-2 border-blue-600'>
-				<Link href={'/'} className='border-2 border-purple-500'>
+		<header className='sticky top-0 bg-white'>
+			<div className='flex w-full p-3 items-center justify-between'>
+				<Link href={'/'} className=''>
 					<Image
 						src="/static/Google_logo_(2010-2013).png"
 						alt="Google Logo"
@@ -24,7 +24,7 @@ export default function SearchHeader() {
 						blurDataURL={'/static/Google_logo_(2010-2013).png'}
 					/>
 				</Link>
-				<div className='flex-1 border-2 border-red-300'>
+				<div className='flex-1'>
 					<SearchBox />
 				</div>
 				<div className='hidden md:inline-flex space-x-2'>
