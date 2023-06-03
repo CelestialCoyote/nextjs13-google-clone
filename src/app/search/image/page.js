@@ -3,8 +3,9 @@ import ImageSearchResults from "@/components/ImageSearchResults";
 
 
 export default async function ImageSearchPage({ searchParams }) {
+	const startIndex = searchParams.start || "1";
 	const response = await fetch(
-		`https://www.googleapis.com/customsearch/v1?key=${process.env.GOOGLE_API_KEY}&cx=${process.env.GOOGLE_CONTEXT_KEY}&q=${searchParams.searchTerm}&searchType=image`
+		`https://www.googleapis.com/customsearch/v1?key=${process.env.GOOGLE_API_KEY}&cx=${process.env.GOOGLE_CONTEXT_KEY}&q=${searchParams.searchTerm}&searchType=image&start=${startIndex}`
 	);
 
 	if (!response.ok) {

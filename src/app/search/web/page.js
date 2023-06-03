@@ -3,8 +3,9 @@ import WebSearchResults from "@/components/WebSearchResults";
 
 
 export default async function WebSearchPage({ searchParams }) {
+	const startIndex = searchParams.start || "1";
 	const response = await fetch(
-		`https://www.googleapis.com/customsearch/v1?key=${process.env.GOOGLE_API_KEY}&cx=${process.env.GOOGLE_CONTEXT_KEY}&q=${searchParams.searchTerm}`
+		`https://www.googleapis.com/customsearch/v1?key=${process.env.GOOGLE_API_KEY}&cx=${process.env.GOOGLE_CONTEXT_KEY}&q=${searchParams.searchTerm}&searchType=image&start=${startIndex}`
 	);
 
 	if (!response.ok) {
