@@ -8,7 +8,7 @@ export default function Home() {
 		<>
 			<HomeHeader />
 
-			<div className='flex flex-col items-center mt-24'>
+			<div className='flex flex-col h-screen items-center mt-24 border'>
 				<Image
 					src="/static/Google_logo_(2010-2013).png"
 					alt="Google Logo"
@@ -20,6 +20,7 @@ export default function Home() {
 					placeholder="blur"
 					blurDataURL={'/static/Google_logo_(2010-2013).png'}
 				/>
+
 				<HomeSearch />
 			</div>
 		</>
